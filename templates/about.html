@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crop Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+         body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-image: url('/static/crop1.jpg'); /* Adjust path to point to the correct static folder */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Main About Section */
+        .about-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Responsive Image */
+        .about-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Team Section */
+        .team-section {
+            margin-top: 50px;
+        }
+
+        .team-heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Crop Recommendation System</div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <!-- <a href="#">Services</a>
+                <a href="#">Contact</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main About Section -->
+    <div class="about-container">
+        <h1>About Our System</h1>
+        <p>
+            The Crop Recommendation System is designed to help farmers and agriculturists make informed decisions 
+            about which crops are best suited for specific environmental conditions. By using a machine learning 
+            model, we predict the most suitable crop based on factors like soil properties, weather conditions, 
+            and rainfall.
+        </p>
+        <p>
+            Our system's goal is to maximize yield while reducing waste and inefficiencies in farming practices, 
+            ultimately helping to improve food security and support sustainable agriculture.
+        </p>
+        <img src="{{ url_for('static', filename='about.jpg') }}" alt="About Us" class="about-image">
+        
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2 class="team-heading">Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='person.jpg') }}" alt="Team Member 1">
+                    <h3>Pavan Eega</h3>
+                    <p>Lead Data Scientist</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='person.jpg') }}" alt="Team Member 2">
+                    <h3>Harsha Maddali</h3>
+                    <p>Machine Learning Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='person.jpg') }}" alt="Team Member 3">
+                    <h3>Naveen Devarapalli</h3>
+                    <p>Software Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
